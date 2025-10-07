@@ -29,7 +29,7 @@
 #
 #    "/home/hamada/K_Pro/firmware/AUM_kintex7/Primary_Kintex7_500MHz_ver2/SiTCP_Netlist_for_Artix7/SiTCP_XC7A_32K_BBT_V110.edf"
 #    "/home/hamada/K_Pro/firmware/AUM_kintex7/Primary_Kintex7_500MHz_ver2/hdl/mikumari/cbt/CalPlateauThreshold_US.v"
-#    "/home/hamada/K_Pro/firmware/AUM_kintex7/Secondary_Kintex7_500MHz_ver2/hdl/laccp/laccp/CalcCalibDelay.v"
+#    "/home/hamada/K_Pro/firmware/AUM_kintex7/hdl/laccp/laccp/CalcCalibDelay.v"
 #    "/home/hamada/K_Pro/firmware/AUM_kintex7/Primary_Kintex7_500MHz_ver2/hdl/laccp/laccp/CalcFineLantency_US.v"
 #    "/home/hamada/K_Pro/firmware/AUM_kintex7/Primary_Kintex7_500MHz_ver2/hdl/mikumari/cbt/Cdcm8RxImpl.v"
 #    "/home/hamada/K_Pro/firmware/AUM_kintex7/Primary_Kintex7_500MHz_ver2/hdl/mikumari/cbt/Cdcm8TxImpl_verilog.v"
@@ -137,7 +137,7 @@ proc checkRequiredFiles { origin_dir} {
   set files [list \
  "[file normalize "$origin_dir/SiTCP_Netlist_for_Artix7/SiTCP_XC7A_32K_BBT_V110.edf"]"\
  "[file normalize "$origin_dir/hdl/mikumari/cbt/CalPlateauThreshold_US.v"]"\
- "[file normalize "$origin_dir/../Secondary_Kintex7_500MHz_ver2/hdl/laccp/laccp/CalcCalibDelay.v"]"\
+ "[file normalize "$origin_dir/hdl/laccp/laccp/CalcCalibDelay.v"]"\
  "[file normalize "$origin_dir/hdl/laccp/laccp/CalcFineLantency_US.v"]"\
  "[file normalize "$origin_dir/hdl/mikumari/cbt/Cdcm8RxImpl.v"]"\
  "[file normalize "$origin_dir/hdl/mikumari/cbt/Cdcm8TxImpl_verilog.v"]"\
@@ -377,7 +377,7 @@ set obj [get_filesets sources_1]
 set files [list \
  [file normalize "${origin_dir}/SiTCP_Netlist_for_Artix7/SiTCP_XC7A_32K_BBT_V110.edf"] \
  [file normalize "${origin_dir}/hdl/mikumari/cbt/CalPlateauThreshold_US.v"] \
- [file normalize "${origin_dir}/../Secondary_Kintex7_500MHz_ver2/hdl/laccp/laccp/CalcCalibDelay.v"] \
+ [file normalize "${origin_dir}/hdl/laccp/laccp/CalcCalibDelay.v"] \
  [file normalize "${origin_dir}/hdl/laccp/laccp/CalcFineLantency_US.v"] \
  [file normalize "${origin_dir}/hdl/mikumari/cbt/Cdcm8RxImpl.v"] \
  [file normalize "${origin_dir}/hdl/mikumari/cbt/Cdcm8TxImpl_verilog.v"] \
@@ -470,7 +470,7 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "library" -value "mylib" -objects $file_obj
 
-set file "$origin_dir/../Secondary_Kintex7_500MHz_ver2/hdl/laccp/laccp/CalcCalibDelay.v"
+set file "$origin_dir/hdl/laccp/laccp/CalcCalibDelay.v"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "library" -value "mylib" -objects $file_obj
